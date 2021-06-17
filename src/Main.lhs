@@ -22,6 +22,7 @@ The program is an executable and runs from a program main which reads from three
 
 >main :: IO ()
 >main = do
+>    hSetBuffering stdout NoBuffering
 >    putStrLn "Welcome to 'Learn you a Hangman for great good!'" 
 >    hardWordsLibrary <- readFile "hardWords.txt"
 >    let hardWords = lines hardWordsLibrary
